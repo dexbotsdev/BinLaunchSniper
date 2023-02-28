@@ -5,9 +5,9 @@ import logger from "./logger.js";
 class BinLaunchScanner {
   constructor(config,emitter) {
     this.bin = new Binance().options({
-       api_key: config.apiKeyMain,
-      api_secret: config.secretKeyMain,
-      beautify: true,
+      APIKEY: config.apiKey,
+      APISECRET: config.secretKey, 
+      family: 4,
     }); 
     this.currentSymbols=[];
     this.e= emitter;

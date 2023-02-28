@@ -1,10 +1,6 @@
 {
-"discordToken": "",  
 "apiKey":"",
-"secretKey":"",
-"testnet":true,
-"channelIdA": "1075640939999146005", 
-"channelIdB": "1078148978941640754", 
+"secretKey":"", 
 "fundsPerTrade": 100, 
 "numberOfTakeProfits": 2,   
 "leverage": 100,

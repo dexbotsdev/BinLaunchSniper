@@ -4,9 +4,10 @@ import logger from "./logger.js";
 class BinTrader {
   constructor(config) {
     this.bin = new Binance().options({
-      APIKEY: config.apiKeyMain,
-      APISECRET: config.secretKeyMain,
-      hedgeMode: false
+      APIKEY: config.apiKey,
+      APISECRET: config.secretKey,
+      testnet:true,
+      family: 4,
     });
     this.investAmount = config.fundsPerTrade;
     this.tpLimits = config.numberOfTakeProfits;
@@ -24,7 +25,7 @@ class BinTrader {
   }
 
   verifyAccount = async () => {
-    const account = await this.account();
+    const account = await this.getAccount();
     logger.docs('Veifying Account ', account.code);
     if (Number(account.code) < 0) return false;
     else return true;

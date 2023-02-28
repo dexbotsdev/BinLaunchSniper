@@ -18,7 +18,7 @@ async function start() {
  
         let bin = new BinLaunchScanner(config,eventEmitter);
         await bin.initializeSymbols();
-        const accountCheck = true;//await ts.verifyAccount();
+        const accountCheck =  await ts.verifyAccount();
 
         if(!accountCheck){
             logger.error('API Keys Invalid or Account Not Found');
