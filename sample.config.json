@@ -1,9 +1,8 @@
 {
 "apiKey":"",
-"secretKey":"", 
+"secretKey":"",     
 "fundsPerTrade": 100, 
-"numberOfTakeProfits": 2,   
-"leverage": 100,
+"numberOfTakeProfits": 2,    
 "closePositionAfterXMinutes": 300,
 "maximumNumberOfOpenPositions": 5, 
 "cancelTrade": 60, 

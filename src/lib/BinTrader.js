@@ -5,8 +5,7 @@ class BinTrader {
   constructor(config) {
     this.bin = new Binance().options({
       APIKEY: config.apiKey,
-      APISECRET: config.secretKey,
-      testnet:true,
+      APISECRET: config.secretKey, 
       family: 4,
     });
     this.investAmount = config.fundsPerTrade;
