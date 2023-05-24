@@ -4,6 +4,9 @@ import fs from 'fs'
 import BinTrader from "./src/lib/BinTrader.js"; 
 import logger from "./src/lib/logger.js"; 
 import BinLaunchScanner from "./src/lib/BinLaunchScanner.js";
+import { createRequire } from 'module';
+
+const require = createRequire(import.meta.url);
 
 const eventEmitter = new EventEmitter();
 let config=null; 
@@ -35,7 +38,7 @@ async function start() {
             logger.info('Open New Market Trade for Signal for SYMBOL - '+ tradeSignal.tokenSymbol)
              try{
               
-               ts.tradeEnterSignal(tradeSignal,config);
+               await ts.tradeEnterSignal(tradeSignal,config);
 
              }catch(error){
                 console.log(error)
